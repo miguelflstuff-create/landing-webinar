@@ -1,0 +1,65 @@
+<!-- ======================================================
+  SECCIÓN 3 — BARRA DE NÚMEROS (Social Proof)
+  COPIAR TODO ESTO Y PEGAR EN GHL → Custom HTML
+====================================================== -->
+<style>
+.s3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0F1520;
+  border-top: 1px solid #1E2A40;
+  border-bottom: 1px solid #1E2A40;
+  padding: 34px 20px;
+  -webkit-font-smoothing: antialiased;
+}
+.s3__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.s3__item {
+  text-align: center;
+  padding: 14px 40px;
+  position: relative;
+  flex: 1;
+  min-width: 150px;
+}
+.s3__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 15%; height: 70%;
+  width: 1px;
+  background: #1E2A40;
+}
+.s3__num   { font-size: 34px; font-weight: 900; color: #F0C040; line-height: 1; }
+.s3__label { font-size: 13px; color: #8A95A8; margin-top: 5px; }
+
+@media(max-width:540px){
+  .s3__item:not(:last-child)::after { display: none; }
+  .s3__item { padding: 12px 18px; min-width: 120px; }
+  .s3__num  { font-size: 28px; }
+}
+</style>
+
+<div class="s3">
+  <div class="s3__row">
+    <div class="s3__item">
+      <div class="s3__num">+300</div>
+      <div class="s3__label">Personas formadas</div>
+    </div>
+    <div class="s3__item">
+      <div class="s3__num">3 años</div>
+      <div class="s3__label">En el mercado</div>
+    </div>
+    <div class="s3__item">
+      <div class="s3__num">7 fig.</div>
+      <div class="s3__label">Generados para clientes</div>
+    </div>
+    <div class="s3__item">
+      <div class="s3__num">100%</div>
+      <div class="s3__label">Trabajo remoto</div>
+    </div>
+  </div>
+</div>

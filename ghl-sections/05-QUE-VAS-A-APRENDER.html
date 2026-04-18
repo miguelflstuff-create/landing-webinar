@@ -1,0 +1,114 @@
+<!-- ======================================================
+  SECCIÓN 5 — QUÉ VAS A APRENDER
+  COPIAR TODO ESTO Y PEGAR EN GHL → Custom HTML
+====================================================== -->
+<style>
+.s5 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0F1520;
+  padding: 80px 20px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+.s5__tag {
+  display: inline-block;
+  background: rgba(240,192,64,0.1);
+  color: #F0C040;
+  border: 1px solid rgba(240,192,64,0.28);
+  border-radius: 50px;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  margin-bottom: 18px;
+}
+.s5__title {
+  font-size: clamp(26px, 4.5vw, 40px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.s5__title span { color: #F0C040; }
+.s5__sub {
+  font-size: 17px;
+  color: #C8D0DC;
+  margin-bottom: 48px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+.s5__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.s5__card {
+  background: #161E2E;
+  border: 1px solid #1E2A40;
+  border-radius: 10px;
+  padding: 28px 24px;
+  text-align: left;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.s5__card:hover { border-color: rgba(240,192,64,0.35); transform: translateY(-2px); }
+.s5__card.bonus {
+  border-color: rgba(240,192,64,0.3);
+  background: linear-gradient(135deg, #161E2E, #1A1600);
+}
+.s5__num   { font-size: 12px; font-weight: 800; color: #F0C040; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+.s5__ctitle { font-size: 17px; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 10px; }
+.s5__cdesc  { font-size: 14px; color: #8A95A8; line-height: 1.65; }
+
+@media(max-width:580px){ .s5__grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="s5">
+  <div class="s5__tag">Contenido de la clase</div>
+  <h2 class="s5__title">Lo que vas a descubrir el <span>28 de Abril</span></h2>
+  <p class="s5__sub">Sin teoría de relleno. Solo lo que funciona en el mercado real hoy.</p>
+
+  <div class="s5__grid">
+
+    <div class="s5__card">
+      <div class="s5__num">01</div>
+      <div class="s5__ctitle">Qué es un Closer Digital y por qué las empresas lo necesitan ya</div>
+      <div class="s5__cdesc">Entiende el rol, el mercado y por qué hay más demanda que oferta de buenos closers en España ahora mismo.</div>
+    </div>
+
+    <div class="s5__card">
+      <div class="s5__num">02</div>
+      <div class="s5__ctitle">Cómo se gana dinero de verdad: comisiones y sueldos reales</div>
+      <div class="s5__cdesc">Números reales, no promesas. Cómo funciona la remuneración y cómo llegar a 3.000€/mes es alcanzable.</div>
+    </div>
+
+    <div class="s5__card">
+      <div class="s5__num">03</div>
+      <div class="s5__ctitle">Cómo conseguir tu primer trabajo aunque no tengas experiencia</div>
+      <div class="s5__cdesc">El proceso exacto para entrar al mercado, qué buscan las empresas y cómo diferenciarte desde el primer día.</div>
+    </div>
+
+    <div class="s5__card">
+      <div class="s5__num">04</div>
+      <div class="s5__ctitle">Qué separa a un closer mediocre de uno que gana bien</div>
+      <div class="s5__cdesc">La mentalidad, la técnica y los hábitos que Luis ha visto en los alumnos que más rápido escalan.</div>
+    </div>
+
+    <div class="s5__card">
+      <div class="s5__num">05</div>
+      <div class="s5__ctitle">El plan completo: de cero a tu primer cierre en el menor tiempo posible</div>
+      <div class="s5__cdesc">El camino paso a paso. Lo que tienes que hacer esta semana para empezar a moverte de verdad.</div>
+    </div>
+
+    <div class="s5__card bonus">
+      <div class="s5__num">🎁 Bonus</div>
+      <div class="s5__ctitle">Sesión de preguntas en vivo con Luis</div>
+      <div class="s5__cdesc">Si asistes en directo, Luis responde tus dudas en tiempo real. Esta parte vale más que toda la clase junta.</div>
+    </div>
+
+  </div>
+</section>

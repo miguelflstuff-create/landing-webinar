@@ -1,0 +1,221 @@
+<!-- ======================================================
+  SECCIÓN 2 — HERO PRINCIPAL
+  Contiene: Headline, Subheadline, Fecha, Countdown, Botón
+  COPIAR TODO ESTO Y PEGAR EN GHL → Custom HTML
+====================================================== -->
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+
+.s2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(175deg, #090E1A 0%, #080C14 100%);
+  padding: 68px 20px 76px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.s2::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(240,192,64,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.s2__logo {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #F0C040;
+  margin-bottom: 26px;
+  opacity: 0.9;
+}
+
+.s2__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(240,192,64,0.1);
+  border: 1px solid rgba(240,192,64,0.25);
+  border-radius: 50px;
+  padding: 7px 20px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #F0C040;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.s2__h1 {
+  font-size: clamp(30px, 5.5vw, 56px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1px;
+  color: #fff;
+  margin: 0 auto 22px;
+  max-width: 760px;
+}
+.s2__h1 em {
+  font-style: normal;
+  color: #F0C040;
+}
+
+.s2__sub {
+  font-size: clamp(16px, 2.5vw, 19px);
+  color: #C8D0DC;
+  max-width: 570px;
+  margin: 0 auto 32px;
+  line-height: 1.68;
+}
+.s2__sub strong { color: #fff; }
+
+.s2__datebox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #161E2E;
+  border: 1px solid rgba(240,192,64,0.2);
+  border-radius: 10px;
+  padding: 13px 24px;
+  margin-bottom: 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #C8D0DC;
+}
+.s2__datebox strong { color: #fff; }
+.s2__datebox .gold { color: #F0C040; font-weight: 800; }
+
+/* Countdown */
+.s2-count {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+}
+.s2-count__box {
+  background: #161E2E;
+  border: 1px solid #1E2A40;
+  border-radius: 10px;
+  padding: 14px 16px;
+  min-width: 72px;
+  text-align: center;
+}
+.s2-count__n {
+  display: block;
+  font-size: 34px;
+  font-weight: 900;
+  color: #F0C040;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.s2-count__l {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #8A95A8;
+  margin-top: 5px;
+}
+
+/* Botón */
+.s2__btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #F0C040 0%, #C9970A 100%);
+  color: #000;
+  font-weight: 900;
+  font-size: 17px;
+  padding: 18px 42px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 30px rgba(240,192,64,0.35);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  max-width: 500px;
+  width: 100%;
+}
+.s2__btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(240,192,64,0.5); }
+
+.s2__note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #8A95A8;
+}
+.s2__note span { margin: 0 5px; }
+
+@media (max-width: 500px) {
+  .s2__btn { font-size: 15px; padding: 16px 24px; }
+  .s2-count__box { min-width: 60px; padding: 12px 10px; }
+  .s2-count__n { font-size: 28px; }
+}
+</style>
+
+<section class="s2">
+
+  <p class="s2__logo">⚡ Closers Digitales</p>
+
+  <div class="s2__eyebrow">🎓 Clase gratuita en vivo · Martes 28 Abril</div>
+
+  <h1 class="s2__h1">
+    Cómo generar <em>3.000€/mes</em><br />
+    trabajando desde casa<br />
+    como <em>Closer Digital</em>
+  </h1>
+
+  <p class="s2__sub">
+    Luis Romero te muestra en directo el método exacto que más de 300 personas
+    ya usan para ganar dinero real online —
+    <strong>aunque nunca hayas vendido nada en tu vida.</strong>
+  </p>
+
+  <div class="s2__datebox">
+    📅 &nbsp;<strong>Martes 28 de Abril · 19:00h España</strong>
+    &nbsp;·&nbsp; Online &nbsp;·&nbsp;
+    <span class="gold">GRATIS</span>
+  </div>
+
+  <!-- COUNTDOWN — si cambias la fecha del evento, edita la línea del script abajo -->
+  <div class="s2-count">
+    <div class="s2-count__box"><span class="s2-count__n" id="s2d">00</span><span class="s2-count__l">Días</span></div>
+    <div class="s2-count__box"><span class="s2-count__n" id="s2h">00</span><span class="s2-count__l">Horas</span></div>
+    <div class="s2-count__box"><span class="s2-count__n" id="s2m">00</span><span class="s2-count__l">Min</span></div>
+    <div class="s2-count__box"><span class="s2-count__n" id="s2s">00</span><span class="s2-count__l">Seg</span></div>
+  </div>
+
+  <a href="#registro" class="s2__btn">👉 &nbsp;RESERVAR MI PLAZA GRATIS</a>
+
+  <p class="s2__note">
+    Sin tarjeta de crédito
+    <span>·</span> Sin compromiso
+    <span>·</span> Solo para personas serias
+  </p>
+
+</section>
+
+<script>
+(function(){
+  var target = new Date('2025-04-28T19:00:00+02:00'); // ← CAMBIA AQUÍ si cambia la fecha
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    var diff = target - new Date();
+    if(diff <= 0){
+      document.querySelector('.s2-count').innerHTML =
+        '<p style="color:#F0C040;font-weight:800;font-size:18px;text-align:center;">🔴 La clase está comenzando AHORA</p>';
+      return;
+    }
+    document.getElementById('s2d').textContent = pad(Math.floor(diff/86400000));
+    document.getElementById('s2h').textContent = pad(Math.floor((diff%86400000)/3600000));
+    document.getElementById('s2m').textContent = pad(Math.floor((diff%3600000)/60000));
+    document.getElementById('s2s').textContent = pad(Math.floor((diff%60000)/1000));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
