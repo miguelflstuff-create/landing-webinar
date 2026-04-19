@@ -1,122 +1,36 @@
 <!-- ======================================================
   SECCIÓN 6 — SOBRE LUIS ROMERO
-  COPIAR TODO ESTO Y PEGAR EN GHL → Custom HTML
-
-  ┌─────────────────────────────────────────────────────┐
-  │  📸 FOTO DE LUIS                                    │
-  │  1. En GHL ve a: Media Library                      │
-  │  2. Sube la foto de Luis                            │
-  │  3. Copia la URL que te da GHL                      │
-  │  4. Pégala en src="AQUI-VA-LA-URL-DE-LA-FOTO"      │
-  │     (línea marcada más abajo con ←←← FOTO)         │
-  └─────────────────────────────────────────────────────┘
+  📸 FOTO: Sube la imagen en GHL → Media Library
+     Copia la URL y pégala en src="AQUI-URL-FOTO"
+  Requiere: 00-GLOBAL-CSS.html pegado antes en GHL
 ====================================================== -->
-<style>
-.s6 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #080C14;
-  padding: 80px 20px;
-  -webkit-font-smoothing: antialiased;
-}
-.s6__inner {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 60px;
-  align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.s6__imgwrap { position: relative; }
-.s6__img {
-  width: 100%;
-  border-radius: 14px;
-  border: 2px solid #1E2A40;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 4/5;
-  background: #161E2E;
-}
-.s6__badge {
-  position: absolute;
-  bottom: -14px; right: -14px;
-  background: #F0C040;
-  color: #000;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 900;
-  font-size: 13px;
-  border-radius: 10px;
-  padding: 12px 16px;
-  line-height: 1.35;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-.s6__tag {
-  display: inline-block;
-  background: rgba(240,192,64,0.1);
-  color: #F0C040;
-  border: 1px solid rgba(240,192,64,0.28);
-  border-radius: 50px;
-  font-size: 12px; font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 6px 18px;
-  margin-bottom: 16px;
-}
-.s6__name  { font-size: 32px; font-weight: 900; color: #fff; margin-bottom: 4px; }
-.s6__role  { font-size: 14px; color: #F0C040; font-weight: 700; letter-spacing: 0.4px; margin-bottom: 20px; }
-.s6__bio   { font-size: 15px; color: #C8D0DC; line-height: 1.8; margin-bottom: 28px; }
-.s6__bio strong { color: #fff; }
-
-.s6__stats {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  border-top: 1px solid #1E2A40;
-  padding-top: 24px;
-}
-.s6__stat strong { display: block; font-size: 26px; font-weight: 900; color: #F0C040; line-height: 1; }
-.s6__stat span   { display: block; font-size: 13px; color: #8A95A8; margin-top: 3px; }
-
-@media(max-width:700px){
-  .s6__inner { grid-template-columns: 1fr; gap: 40px; }
-  .s6__badge { bottom: 10px; right: 10px; }
-  .s6__img   { aspect-ratio: 4/3; }
-}
-</style>
 
 <section class="s6">
   <div class="s6__inner">
 
-    <!-- ↓↓↓ FOTO — Cambia el src por la URL de tu imagen en GHL Media Library ↓↓↓ -->
+    <!-- ↓ FOTO — reemplaza src con URL de GHL Media Library ↓ -->
     <div class="s6__imgwrap">
-      <img
-        src="AQUI-VA-LA-URL-DE-LA-FOTO"
-        alt="Luis Romero — Fundador de Closers Digitales"
-        class="s6__img"
-        loading="lazy"
-      />
-      <div class="s6__badge">
-        +300<br>alumnos<br>formados
-      </div>
+      <img src="AQUI-URL-FOTO" alt="Luis Romero — Closers Digitales" class="s6__img" loading="lazy" />
+      <div class="s6__badge">+300<br>alumnos</div>
     </div>
-    <!-- ↑↑↑ FIN FOTO ↑↑↑ -->
+    <!-- ↑ FIN FOTO ↑ -->
 
-    <div>
+    <div class="s6__content">
       <div class="s6__tag">Tu instructor</div>
       <h2 class="s6__name">Luis Romero</h2>
-      <p class="s6__role">Fundador · Closers Digitales · Agencia de ventas de alto nivel</p>
+      <p class="s6__role">Fundador · Closers Digitales · Agencia de ventas</p>
       <p class="s6__bio">
         Luis no es un influencer que vende cursos desde un yate.
-        Es el dueño de una agencia de ventas digitales que genera resultados reales para clientes de alto perfil.
+        Es el dueño de una agencia de ventas que genera resultados reales para clientes de alto perfil.
         <br /><br />
-        Lleva <strong>3 años</strong> construyendo equipos de closers, ha formado a
-        <strong>más de 300 personas</strong> y ha demostrado con datos que este modelo funciona.
+        Lleva <strong>3 años</strong> construyendo equipos de closers y ha formado a
+        <strong>más de 300 personas</strong> con datos demostrables.
         <br /><br />
-        En esta clase te enseña exactamente lo que él haría si empezara desde cero hoy.
+        En esta clase te enseña lo que él haría si empezara desde cero hoy.
       </p>
       <div class="s6__stats">
         <div class="s6__stat"><strong>3 años</strong><span>en el sector</span></div>
-        <div class="s6__stat"><strong>+300</strong><span>personas formadas</span></div>
+        <div class="s6__stat"><strong>+300</strong><span>formados</span></div>
         <div class="s6__stat"><strong>7 fig.</strong><span>para clientes</span></div>
       </div>
     </div>

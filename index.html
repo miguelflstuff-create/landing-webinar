@@ -2,474 +2,229 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Clase gratuita en vivo: cómo generar 3.000€/mes trabajando de forma remota como Closer Digital. Martes 28 de abril, 7pm." />
-  <title>Clase Gratuita — Closer Digital | Genera 3.000€/mes desde casa</title>
-
-  <!-- Preload CSS para velocidad máxima -->
-  <link rel="preload" href="styles.css" as="style" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Clase gratuita en vivo: cómo generar 3.000€/mes trabajando como Closer Digital. Martes 28 de Abril, 7pm España." />
+  <title>Clase Gratuita — Closer Digital | 3.000€/mes desde casa</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Favicon (reemplaza con el tuyo) -->
-  <!-- <link rel="icon" href="favicon.ico" /> -->
 </head>
 <body>
 
-  <!-- ============================================================
-       SECCIÓN 1: TOPBAR — Barra de urgencia superior
-       Editar: texto del anuncio urgente
-  ============================================================ -->
-  <div class="topbar">
-    🔴 &nbsp;PLAZAS LIMITADAS — Clase en vivo el <strong>Martes 28 de Abril a las 19:00h (España)</strong>&nbsp; 🔴
+<!-- SECCIÓN 1 — TOPBAR -->
+<div class="s1-bar">
+  🔴 <strong>Martes 28 Abril · 19:00h España</strong> — Plazas limitadas 🔴
+</div>
+
+<div class="s1-floating" id="floatingCTA">
+  <a href="#registro" class="s1-floating-btn">
+    👉 &nbsp;RESERVAR MI PLAZA GRATIS
+  </a>
+</div>
+
+<script>
+(function(){
+  var el = document.getElementById('floatingCTA');
+  var shown = false;
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 300 && !shown){ shown = true; el.classList.add('visible'); }
+    else if(window.scrollY <= 300 && shown){ shown = false; el.classList.remove('visible'); }
+  }, { passive: true });
+})();
+</script>
+
+<!-- SECCIÓN 2 — HERO -->
+<section class="s2">
+  <p class="s2__logo">⚡ Closers Digitales</p>
+  <div class="s2__eyebrow">🎓 Clase gratuita en vivo · 28 Abril</div>
+
+  <h1 class="s2__h1">
+    Cómo generar <em>3.000€/mes</em>
+    desde casa como <em>Closer Digital</em>
+  </h1>
+
+  <p class="s2__sub">
+    Luis Romero te muestra en directo el método que más de 300 personas
+    ya usan para ganar dinero real online —
+    <strong>aunque nunca hayas vendido nada.</strong>
+  </p>
+
+  <div class="s2__datebox">
+    📅 &nbsp;<strong>Martes 28 Abril · 19:00h</strong>
+    &nbsp;·&nbsp; <span class="gold">GRATIS</span>
   </div>
 
-
-  <!-- ============================================================
-       SECCIÓN 2: HERO — Headline principal + Countdown + CTA
-       Editar: headline, subheadline, fecha, botón
-  ============================================================ -->
-  <section class="hero">
-    <div class="container">
-
-      <p class="hero__eyebrow">🎓 Clase gratuita en vivo</p>
-
-      <h1 class="hero__headline">
-        Cómo generar <em>3.000€/mes</em> trabajando desde cualquier lugar
-        como <em>Closer Digital</em> —aunque nunca hayas vendido nada
-      </h1>
-
-      <p class="hero__sub">
-        Luis Romero te muestra en directo el método exacto que han usado más de 300 personas
-        para conseguir trabajo real, online y bien pagado.
-      </p>
-
-      <div class="hero__date-box">
-        <span class="icon">📅</span>
-        <span>Martes 28 de Abril &nbsp;·&nbsp; 19:00h hora España &nbsp;·&nbsp; <strong>100% GRATIS</strong></span>
-      </div>
-
-      <!-- Countdown timer — se rellena automáticamente con JS -->
-      <div class="countdown">
-        <div class="countdown__item">
-          <span class="countdown__number" id="days">00</span>
-          <span class="countdown__label">Días</span>
-        </div>
-        <div class="countdown__item">
-          <span class="countdown__number" id="hours">00</span>
-          <span class="countdown__label">Horas</span>
-        </div>
-        <div class="countdown__item">
-          <span class="countdown__number" id="minutes">00</span>
-          <span class="countdown__label">Min</span>
-        </div>
-        <div class="countdown__item">
-          <span class="countdown__number" id="seconds">00</span>
-          <span class="countdown__label">Seg</span>
-        </div>
-      </div>
-
-      <a href="#registro" class="btn">
-        👉 &nbsp;RESERVAR MI PLAZA GRATIS
-      </a>
-
-      <p class="hero__guarantee">
-        Sin tarjeta de crédito &nbsp;·&nbsp; Sin compromiso &nbsp;·&nbsp; 100% Online
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SECCIÓN 3: SOCIAL PROOF BAR — Números de credibilidad
-       Editar: cifras y etiquetas
-  ============================================================ -->
-  <div class="proof-bar">
-    <div class="proof-bar__grid">
-
-      <div class="proof-bar__item">
-        <div class="proof-bar__number">+300</div>
-        <div class="proof-bar__text">Personas formadas</div>
-      </div>
-
-      <div class="proof-bar__item">
-        <div class="proof-bar__number">3 años</div>
-        <div class="proof-bar__text">En el sector</div>
-      </div>
-
-      <div class="proof-bar__item">
-        <div class="proof-bar__number">7 fig.</div>
-        <div class="proof-bar__text">Generados para clientes</div>
-      </div>
-
-      <div class="proof-bar__item">
-        <div class="proof-bar__number">100%</div>
-        <div class="proof-bar__text">Trabajo remoto</div>
-      </div>
-
-    </div>
+  <div class="s2-count">
+    <div class="s2-count__box"><span class="s2-count__n" id="s2d">00</span><span class="s2-count__l">Días</span></div>
+    <div class="s2-count__box"><span class="s2-count__n" id="s2h">00</span><span class="s2-count__l">Horas</span></div>
+    <div class="s2-count__box"><span class="s2-count__n" id="s2m">00</span><span class="s2-count__l">Min</span></div>
+    <div class="s2-count__box"><span class="s2-count__n" id="s2s">00</span><span class="s2-count__l">Seg</span></div>
   </div>
 
+  <a href="#registro" class="s2__btn">👉 &nbsp;RESERVAR MI PLAZA GRATIS</a>
+  <p class="s2__note">Sin tarjeta · Sin compromiso · Solo personas serias</p>
+</section>
 
-  <!-- ============================================================
-       SECCIÓN 4: PARA QUIÉN ES — Identificación del perfil ideal
-       Editar: los bullets de identificación
-  ============================================================ -->
-  <section class="for-who">
-    <div class="container text-center">
+<script>
+(function(){
+  var target = new Date('2025-04-28T19:00:00+02:00');
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    var diff = target - new Date();
+    if(diff <= 0){
+      document.querySelector('.s2-count').innerHTML =
+        '<p style="color:#F0C040;font-weight:800;font-size:16px;">🔴 La clase comienza AHORA</p>';
+      return;
+    }
+    document.getElementById('s2d').textContent = pad(Math.floor(diff/86400000));
+    document.getElementById('s2h').textContent = pad(Math.floor((diff%86400000)/3600000));
+    document.getElementById('s2m').textContent = pad(Math.floor((diff%3600000)/60000));
+    document.getElementById('s2s').textContent = pad(Math.floor((diff%60000)/1000));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
 
-      <div class="tag">¿Esto es para ti?</div>
+<!-- SECCIÓN 3 — NÚMEROS -->
+<div class="s3">
+  <div class="s3__row">
+    <div class="s3__item"><div class="s3__num">+300</div><div class="s3__label">Personas formadas</div></div>
+    <div class="s3__item"><div class="s3__num">3 años</div><div class="s3__label">En el mercado</div></div>
+    <div class="s3__item"><div class="s3__num">7 fig.</div><div class="s3__label">Para clientes</div></div>
+    <div class="s3__item"><div class="s3__num">100%</div><div class="s3__label">Trabajo remoto</div></div>
+  </div>
+</div>
 
-      <h2 class="section-title">
-        Esta clase es para ti si...
-      </h2>
-      <p class="section-subtitle">
-        No necesitas experiencia previa. Solo necesitas querer cambiar tu situación económica.
+<!-- SECCIÓN 4 — PARA QUIÉN ES -->
+<section class="s4">
+  <div class="s4__tag">¿Esto es para ti?</div>
+  <h2 class="s4__title">Esta clase es para ti si…</h2>
+  <p class="s4__sub">No necesitas experiencia. Solo querer cambiar tu situación.</p>
+  <ul class="s4__list">
+    <li class="s4__item"><span class="s4__icon">✅</span><span>Estás cansado de trabajar muchas horas por un sueldo que no da para vivir como quieres</span></li>
+    <li class="s4__item"><span class="s4__icon">✅</span><span>Quieres trabajar desde casa o desde cualquier lugar, sin horarios fijos ni oficina</span></li>
+    <li class="s4__item"><span class="s4__icon">✅</span><span>Te atrae el mundo de las ventas pero no sabes cómo empezar ni dónde encontrar trabajo</span></li>
+    <li class="s4__item"><span class="s4__icon">✅</span><span>Has probado cosas online que no funcionaron y buscas algo con resultado real y demostrable</span></li>
+    <li class="s4__item"><span class="s4__icon">✅</span><span>Quieres aprender de alguien que lo hace de verdad, no de un teórico de YouTube</span></li>
+  </ul>
+</section>
+
+<!-- SECCIÓN 5 — QUÉ VAS A APRENDER -->
+<section class="s5">
+  <div class="s5__tag">Contenido de la clase</div>
+  <h2 class="s5__title">Lo que descubres el <span>28 de Abril</span></h2>
+  <p class="s5__sub">Sin teoría. Solo lo que funciona en el mercado hoy.</p>
+  <div class="s5__grid">
+    <div class="s5__card"><div class="s5__num">01</div><div class="s5__ctitle">Qué es un Closer Digital y por qué las empresas lo necesitan ya</div><div class="s5__cdesc">El rol, el mercado y por qué hay más demanda que oferta en España ahora mismo.</div></div>
+    <div class="s5__card"><div class="s5__num">02</div><div class="s5__ctitle">Cómo se gana dinero de verdad: comisiones y sueldos reales</div><div class="s5__cdesc">Números reales. Cómo funciona la remuneración y por qué 3.000€/mes es alcanzable.</div></div>
+    <div class="s5__card"><div class="s5__num">03</div><div class="s5__ctitle">Cómo conseguir trabajo aunque no tengas experiencia</div><div class="s5__cdesc">El proceso exacto para entrar al mercado y diferenciarte desde el primer día.</div></div>
+    <div class="s5__card"><div class="s5__num">04</div><div class="s5__ctitle">Qué separa a un closer mediocre de uno que gana bien</div><div class="s5__cdesc">La mentalidad, técnica y hábitos de los alumnos que más rápido escalan.</div></div>
+    <div class="s5__card"><div class="s5__num">05</div><div class="s5__ctitle">El plan completo: de cero a tu primer cierre</div><div class="s5__cdesc">Lo que tienes que hacer esta semana para empezar a moverte de verdad.</div></div>
+    <div class="s5__card bonus"><div class="s5__num">🎁 Bonus</div><div class="s5__ctitle">Preguntas en vivo con Luis</div><div class="s5__cdesc">Si asistes en directo, Luis responde tus dudas en tiempo real.</div></div>
+  </div>
+</section>
+
+<!-- SECCIÓN 6 — SOBRE LUIS ROMERO -->
+<section class="s6">
+  <div class="s6__inner">
+    <div class="s6__imgwrap">
+      <img src="AQUI-URL-FOTO" alt="Luis Romero — Closers Digitales" class="s6__img" loading="lazy" />
+      <div class="s6__badge">+300<br>alumnos</div>
+    </div>
+    <div class="s6__content">
+      <div class="s6__tag">Tu instructor</div>
+      <h2 class="s6__name">Luis Romero</h2>
+      <p class="s6__role">Fundador · Closers Digitales · Agencia de ventas</p>
+      <p class="s6__bio">
+        Luis no es un influencer que vende cursos desde un yate.
+        Es el dueño de una agencia de ventas que genera resultados reales para clientes de alto perfil.
+        <br /><br />
+        Lleva <strong>3 años</strong> construyendo equipos de closers y ha formado a
+        <strong>más de 300 personas</strong> con datos demostrables.
+        <br /><br />
+        En esta clase te enseña lo que él haría si empezara desde cero hoy.
       </p>
-
-      <ul class="check-list">
-        <li>
-          <span class="check-icon">✅</span>
-          <span>Estás cansado de trabajar muchas horas por un sueldo que no da para vivir como quieres</span>
-        </li>
-        <li>
-          <span class="check-icon">✅</span>
-          <span>Quieres generar ingresos desde casa o desde cualquier lugar, sin estar atado a una oficina</span>
-        </li>
-        <li>
-          <span class="check-icon">✅</span>
-          <span>Te interesa el mundo de las ventas pero no sabes cómo empezar o dónde trabajar</span>
-        </li>
-        <li>
-          <span class="check-icon">✅</span>
-          <span>Has probado otras cosas online que no han funcionado y buscas algo con resultado real y verificable</span>
-        </li>
-        <li>
-          <span class="check-icon">✅</span>
-          <span>Quieres aprender de alguien que lo ha hecho, no de un teórico de YouTube</span>
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SECCIÓN 5: QUÉ VAS A APRENDER — Contenido de la clase
-       Editar: títulos y descripciones de cada tarjeta
-  ============================================================ -->
-  <section class="learn">
-    <div class="container--wide text-center">
-
-      <div class="tag">Contenido de la clase</div>
-
-      <h2 class="section-title">
-        Lo que vas a descubrir el <span class="text-gold">28 de abril</span>
-      </h2>
-      <p class="section-subtitle">
-        Sin relleno. Sin teoría vacía. Solo lo que funciona en el mercado real hoy.
-      </p>
-
-      <div class="learn__grid">
-
-        <div class="learn__card">
-          <div class="learn__card-number">01</div>
-          <div class="learn__card-title">Qué es un Closer Digital y por qué lo están buscando empresas ahora mismo</div>
-          <div class="learn__card-desc">Entiende el rol, el mercado y por qué hay más demanda que oferta de buenos closers en España.</div>
-        </div>
-
-        <div class="learn__card">
-          <div class="learn__card-number">02</div>
-          <div class="learn__card-title">Cómo se gana dinero de verdad: estructura de comisiones y sueldos reales</div>
-          <div class="learn__card-desc">Números reales, no promesas. Cómo funciona la remuneración y por qué alcanzar 3.000€/mes es un objetivo alcanzable.</div>
-        </div>
-
-        <div class="learn__card">
-          <div class="learn__card-number">03</div>
-          <div class="learn__card-title">Cómo conseguir tu primer trabajo como Closer aunque no tengas experiencia</div>
-          <div class="learn__card-desc">El proceso exacto para entrar al mercado, qué buscan las empresas y cómo diferenciarte desde el primer día.</div>
-        </div>
-
-        <div class="learn__card">
-          <div class="learn__card-number">04</div>
-          <div class="learn__card-title">Las habilidades que te hacen ganar más: lo que separa a un closer mediocre de uno top</div>
-          <div class="learn__card-desc">La mentalidad, la técnica y los hábitos que Luis ha visto en los alumnos que más rápido escalan.</div>
-        </div>
-
-        <div class="learn__card">
-          <div class="learn__card-number">05</div>
-          <div class="learn__card-title">El camino completo: de cero a tu primer cierre en el menor tiempo posible</div>
-          <div class="learn__card-desc">El plan paso a paso. Sin rodeos, sin excusas. Lo que tienes que hacer esta semana para empezar a moverte.</div>
-        </div>
-
-        <div class="learn__card" style="border-color: rgba(240,192,64,0.3); background: linear-gradient(135deg, #1A1A1A, #1C1800);">
-          <div class="learn__card-number" style="font-size:22px;">🎁</div>
-          <div class="learn__card-title">Sesión de preguntas en vivo</div>
-          <div class="learn__card-desc">Luis responde tus dudas en directo. Si puedes asistir en vivo, esta parte vale más que toda la clase.</div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SECCIÓN 6: SOBRE LUIS ROMERO — Bio + credibilidad
-       Editar: foto (src), nombre, bio, estadísticas
-       NOTA: Reemplaza "luis-romero.jpg" con la foto real
-  ============================================================ -->
-  <section class="about">
-    <div class="container">
-      <div class="about__inner">
-
-        <!-- FOTO — reemplaza el src con la imagen real de Luis -->
-        <div class="about__img-wrap">
-          <img
-            src="luis-romero.jpg"
-            alt="Luis Romero — Fundador de Closers Digitales"
-            class="about__img"
-            width="400"
-            height="480"
-            loading="lazy"
-            onerror="this.style.background='#1A1A1A';this.style.minHeight='320px';this.alt='Luis Romero';"
-          />
-          <div class="about__img-badge">
-            +300<br>alumnos<br>formados
-          </div>
-        </div>
-
-        <div class="about__content">
-          <div class="tag" style="margin-bottom:16px;">Tu instructor</div>
-          <h2 class="about__name">Luis Romero</h2>
-          <p class="about__role">Fundador de Closers Digitales · Agencia de ventas · 3 años en el sector</p>
-          <p class="about__bio">
-            Luis no es un "gurú de internet". Es el dueño de una agencia de ventas digitales que trabaja con clientes de alto nivel y genera resultados reales.
-            <br /><br />
-            Lleva 3 años construyendo equipos de closers, formando a más de 300 personas y demostrando que este modelo funciona — con resultados verificables, no con pantallazos de PayPal.
-            <br /><br />
-            En esta clase te muestra exactamente lo que él haría si empezara desde cero hoy.
-          </p>
-
-          <div class="about__stats">
-            <div class="about__stat">
-              <strong>3 años</strong>
-              <span>en el mercado</span>
-            </div>
-            <div class="about__stat">
-              <strong>+300</strong>
-              <span>personas formadas</span>
-            </div>
-            <div class="about__stat">
-              <strong>7 fig.</strong>
-              <span>para clientes</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="s6__stats">
+        <div class="s6__stat"><strong>3 años</strong><span>en el sector</span></div>
+        <div class="s6__stat"><strong>+300</strong><span>formados</span></div>
+        <div class="s6__stat"><strong>7 fig.</strong><span>para clientes</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<!-- SECCIÓN 7 — LA OPORTUNIDAD -->
+<section class="s7">
+  <div class="s7__tag">Lo que viene después</div>
+  <h2 class="s7__pretitle">Para los que quieran ir en serio</h2>
+  <div class="s7__box">
+    <p class="s7__label">🏆 Academia Closers Digitales</p>
+    <h3 class="s7__title">Formación completa + posicionamiento garantizado en proyectos reales</h3>
+    <p class="s7__desc">Al final de la clase, los que quieran dar el paso acceden a la Academia donde Luis te forma y te coloca en proyectos con clientes que <strong>ya están buscando closers ahora mismo.</strong></p>
+    <ul class="s7__list">
+      <li>Formación completa de cero a closer profesional</li>
+      <li>Acceso a proyectos reales con empresas que necesitan closers hoy</li>
+      <li>Posicionamiento garantizado si completas el programa</li>
+      <li>Mentoría directa con Luis y su equipo</li>
+      <li>Comunidad privada para crecer más rápido</li>
+    </ul>
+    <p class="s7__note">💡 Esta información se detalla al final de la clase gratuita.<br />Hoy solo necesitas reservar tu plaza.</p>
+  </div>
+</section>
 
-  <!-- ============================================================
-       SECCIÓN 7: LA OPORTUNIDAD — Vista previa de la academia
-       Editar: título, descripción, beneficios de la academia
-  ============================================================ -->
-  <section class="opportunity">
-    <div class="container text-center">
-
-      <div class="tag">Lo que viene después</div>
-
-      <h2 class="section-title" style="margin-bottom: 48px;">
-        Para los que quieran ir en serio
-      </h2>
-
-      <div class="opportunity__box">
-
-        <p class="opportunity__label">🏆 Academia Closers Digitales</p>
-
-        <h3 class="opportunity__title">
-          Formación completa + posicionamiento garantizado en proyectos reales
-        </h3>
-
-        <p class="opportunity__desc">
-          Al final de la clase, quienes quieran dar el paso tendrán acceso a la Academia donde
-          Luis te forma y te coloca directamente en proyectos que ya necesitan closers —
-          siempre y cuando hagas el trabajo.
-        </p>
-
-        <ul class="opportunity__perks">
-          <li>Formación completa para pasar de cero a closer profesional</li>
-          <li>Acceso a proyectos reales con clientes que ya están buscando closers</li>
-          <li>Posicionamiento garantizado si completas el programa correctamente</li>
-          <li>Mentoría directa con Luis y su equipo</li>
-          <li>Comunidad privada de closers activos para aprendizaje y red de contactos</li>
-        </ul>
-
-        <p class="opportunity__disclaimer">
-          Esta información se comparte al final de la clase gratuita.<br />
-          Hoy solo necesitas reservar tu plaza.
-        </p>
-
+<!-- SECCIÓN 8 — FORMULARIO -->
+<section class="s8" id="registro">
+  <div class="s8__tag">Reserva tu plaza</div>
+  <h2 class="s8__title">Apúntate — es gratis</h2>
+  <p class="s8__sub">Martes 28 Abril · 19:00h España · Online</p>
+  <div class="s8__box">
+    <h3 class="s8__ftitle">Reserva tu plaza gratuita</h3>
+    <p class="s8__fsub">Rellena tus datos y nos vemos el martes</p>
+    <form action="TU-WEBHOOK-GHL" method="POST" id="form-registro">
+      <input type="hidden" name="utm_source"   id="u_s" />
+      <input type="hidden" name="utm_medium"   id="u_m" />
+      <input type="hidden" name="utm_campaign" id="u_c" />
+      <input type="hidden" name="utm_term"     id="u_t" />
+      <div class="fg">
+        <label for="r-name">Tu nombre</label>
+        <input type="text" id="r-name" name="name" placeholder="Ej: Carlos García" required autocomplete="given-name" />
       </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SECCIÓN 8: FORMULARIO DE REGISTRO — CTA final
-       Editar: action del form, campos, texto del botón
-       IMPORTANTE: Conecta el form a tu plataforma (GoHighLevel, etc.)
-  ============================================================ -->
-  <section class="register" id="registro">
-    <div class="container text-center">
-
-      <div class="tag">Reserva tu plaza</div>
-
-      <h2 class="section-title" style="margin-bottom: 8px;">
-        Apúntate ahora — es gratis
-      </h2>
-      <p class="section-subtitle" style="margin-bottom: 48px;">
-        Martes 28 de Abril · 19:00h España · Online
-      </p>
-
-      <div class="register__box">
-
-        <h3 class="register__title">Reserva tu plaza gratis</h3>
-        <p class="register__sub">Rellena tus datos y nos vemos el martes</p>
-
-        <!-- FORM — Cambia el action por tu URL de GoHighLevel / LeadConnector -->
-        <form
-          action="TU_URL_DE_FORMULARIO_AQUI"
-          method="POST"
-          name="registro-closer"
-        >
-          <!-- Campos UTM (ocultos, no tocar) -->
-          <input type="hidden" name="utm_source"   id="utm_source" />
-          <input type="hidden" name="utm_medium"   id="utm_medium" />
-          <input type="hidden" name="utm_campaign" id="utm_campaign" />
-          <input type="hidden" name="utm_term"     id="utm_term" />
-
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Tu nombre"
-              required
-              autocomplete="given-name"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="+34 600 000 000"
-              required
-              autocomplete="tel"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="tu@email.com"
-              required
-              autocomplete="email"
-            />
-          </div>
-
-          <div class="form__submit">
-            <button type="submit" class="btn">
-              👉 &nbsp;RESERVAR MI PLAZA GRATIS
-            </button>
-          </div>
-
-          <p class="form__privacy">
-            Tu información está segura. No compartimos tus datos con terceros.
-            Al registrarte aceptas nuestra <a href="#">política de privacidad</a>.
-          </p>
-
-        </form>
-
-        <p class="register__spots">
-          ⚠️ Plazas limitadas — cierra el registro cuando se completen
-        </p>
-
+      <div class="fg">
+        <label for="r-phone">Teléfono</label>
+        <input type="tel" id="r-phone" name="phone" placeholder="+34 600 000 000" required autocomplete="tel" />
       </div>
+      <div class="fg">
+        <label for="r-email">Email</label>
+        <input type="email" id="r-email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+      </div>
+      <button type="submit" class="s8__btn">👉 &nbsp;RESERVAR MI PLAZA GRATIS</button>
+      <p class="s8__privacy">Tu información está segura. <a href="#">Política de privacidad</a>.</p>
+    </form>
+    <p class="s8__spots">⚠️ Plazas limitadas — cierra al completarse</p>
+  </div>
+</section>
 
-    </div>
-  </section>
+<script>
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  [['utm_source','u_s'],['utm_medium','u_m'],['utm_campaign','u_c'],['utm_term','u_t']].forEach(function(x){
+    var el = document.getElementById(x[1]);
+    if(el && p.get(x[0])) el.value = p.get(x[0]);
+  });
+})();
+</script>
 
-
-  <!-- ============================================================
-       SECCIÓN 9: FOOTER
-       Editar: nombre empresa, links legales
-  ============================================================ -->
-  <footer class="footer">
-    <p>© 2025 Closers Digitales · Todos los derechos reservados</p>
-    <p style="margin-top:8px;">
-      <a href="#">Política de privacidad</a> &nbsp;·&nbsp;
-      <a href="#">Aviso legal</a> &nbsp;·&nbsp;
-      <a href="#">Contacto</a>
-    </p>
-  </footer>
-
-
-  <!-- ============================================================
-       SCRIPTS — Countdown + UTM capture
-       No tocar salvo que cambies la fecha del evento
-  ============================================================ -->
-  <script>
-    // ── COUNTDOWN — Cambia la fecha aquí si cambia el evento
-    (function() {
-      const eventDate = new Date('2025-04-28T19:00:00+02:00'); // 28 Abril 7pm España (CEST)
-
-      function pad(n) { return String(n).padStart(2, '0'); }
-
-      function tick() {
-        const now  = new Date();
-        const diff = eventDate - now;
-
-        if (diff <= 0) {
-          document.querySelector('.countdown').innerHTML =
-            '<p style="color:var(--gold);font-weight:700;font-size:18px;">🔴 La clase está comenzando ahora</p>';
-          return;
-        }
-
-        const days    = Math.floor(diff / 86400000);
-        const hours   = Math.floor((diff % 86400000) / 3600000);
-        const minutes = Math.floor((diff % 3600000)  / 60000);
-        const seconds = Math.floor((diff % 60000)    / 1000);
-
-        document.getElementById('days').textContent    = pad(days);
-        document.getElementById('hours').textContent   = pad(hours);
-        document.getElementById('minutes').textContent = pad(minutes);
-        document.getElementById('seconds').textContent = pad(seconds);
-      }
-
-      tick();
-      setInterval(tick, 1000);
-    })();
-
-    // ── UTM CAPTURE — Captura parámetros de los ads automáticamente
-    (function() {
-      const params = new URLSearchParams(window.location.search);
-      ['utm_source','utm_medium','utm_campaign','utm_term'].forEach(function(key) {
-        const el = document.getElementById(key);
-        if (el && params.get(key)) el.value = params.get(key);
-      });
-    })();
-  </script>
+<!-- SECCIÓN 9 — FOOTER -->
+<footer class="s9">
+  <p>© 2025 Closers Digitales · Todos los derechos reservados</p>
+  <p style="margin-top:8px;">
+    <a href="#">Política de privacidad</a> &nbsp;·&nbsp;
+    <a href="#">Aviso legal</a> &nbsp;·&nbsp;
+    <a href="#">Contacto</a>
+  </p>
+  <p style="margin-top:10px; font-size:12px;">
+    Este sitio no está afiliado a Facebook ni a Meta Platforms Inc.
+    FACEBOOK es una marca comercial de META PLATFORMS, INC.
+  </p>
+</footer>
 
 </body>
 </html>
